@@ -41,7 +41,7 @@ import {
                     Nous sommes à votre service
                   </Typography>
                   <Typography variant="body1" paragraph sx={{ mb: 4 }}>
-                    Vous pouvez nous contacter 24h/24 pour vos achats. Notre équipe est disponible pour répondre à toutes vos questions et vous guider dans votre processus d'achat.
+                    Vous pouvez nous contacter 24h/24 pour vos besoins. Notre équipe est disponible pour répondre à toutes vos questions.
                   </Typography>
 
                   <List sx={{ mt: 2 }}>
@@ -60,7 +60,7 @@ import {
                       </ListItemIcon>
                       <ListItemText 
                         primary="Téléphone" 
-                        secondary="+33 1 23 45 67 89" 
+                        secondary="+225 01 53 57 96 16" 
                       />
                     </ListItem>
                     <ListItem>
@@ -69,7 +69,7 @@ import {
                       </ListItemIcon>
                       <ListItemText 
                         primary="Email" 
-                        secondary="contact@votreentreprise.com" 
+                        secondary="polycreation805@gmail.com" 
                       />
                     </ListItem>
                     <ListItem>
@@ -78,7 +78,7 @@ import {
                       </ListItemIcon>
                       <ListItemText 
                         primary="Adresse" 
-                        secondary="123 Avenue des Champs-Élysées, 75008 Paris, France" 
+                        secondary="Yamoussoukro, INPHB" 
                       />
                     </ListItem>
                   </List>

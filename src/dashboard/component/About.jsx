@@ -3,9 +3,6 @@ import {Link as RouterLink} from 'react-router-dom'
 
 const links = [
   { name: 'En savoir plus', href:'#' },
-  { name: 'Rejoindre notre communauté', href: '#' },
-  { name: 'Nos valeurs', href: '#' },
-  { name: 'Voire le contrat', href: '#' },
 ];
 
 const stats = [

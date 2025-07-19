@@ -53,7 +53,6 @@ const Contact = () => {
        backgroundClip:'text',
        WebkitTextFillColor:'transparent',
        textAlign:'center',
-       marginLeft:'300px',
        width:'100%'
     }} >
         Contactez-nous

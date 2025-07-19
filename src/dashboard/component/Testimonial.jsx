@@ -100,8 +100,8 @@ export default function TestimonialSection() {
           
           <Box component="figcaption" sx={{ mt: 5 }}>
             <Avatar
-              alt="Judith Black"
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              alt="Roxane"
+              src=""
               sx={{
                 width: 40,
                 height: 40,
@@ -117,7 +117,7 @@ export default function TestimonialSection() {
               mt: 3
             }}>
               <Typography component="div" sx={{ fontWeight: 600, color: 'text.primary' }}>
-                Judith Black
+                Roxane
               </Typography>
               
               <svg width={3} height={3} viewBox="0 0 2 2" aria-hidden="true">

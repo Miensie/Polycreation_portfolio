@@ -6,14 +6,14 @@ const people = [
     name: 'Armand konan Kouakou',
     role: 'Co-Founder / Développeur web',
     description: 'Élève ingénieur en matériau et procédé à l\'INP-HB',
-    imageUrl: '/assets/armand.jpg', // ✅ Chemin corrigé
+    imageUrl: '/src/assets/armand.jpg', // ✅ Chemin corrigé
   },
   {
     id: 2,
     name: 'Miensié ezekiel Amani',
-    role: 'Co-Founder / Développeur web & Designer',
-    description: 'Élève ingénieur en matériau et procédé à l\'INP-HB',
-    imageUrl: '/src/assets/ezekiel-profile.jpg', // ✅ Chemin corrigé
+    role: 'Co-Founder / Développeur web, app & Designer graphique',
+    description: 'Élève ingénieur en chimie et génie des procédés à l\'INP-HB',
+    imageUrl: '/src/assets/eze.png', // ✅ Chemin corrigé
   },
   // Ajoutez plus de membres si nécessaire
 ];

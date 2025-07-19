@@ -124,7 +124,7 @@ export default function Home() {
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                     <RotatingLogo
                         alt="Logo"
-                        src="src/assets/logo.jpg"
+                        src="./src/assets/logo.jpg"
                         sx={{
                             width: 250, 
                             height: 250,
@@ -177,25 +177,6 @@ export default function Home() {
                     </Typography>
                     
                     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 2 }}>
-                        <Button 
-                        component={RouterLink} to="/abonner"
-                            variant="contained" 
-                            size="large" 
-                            sx={{
-                                backgroundColor: '#0cbded',
-                                color: 'white',
-                                padding: '10px 25px',
-                                transition: 'all 0.3s ease',
-                                '&:hover': {
-                                    backgroundColor: '#42397e',
-                                    transform: 'translateY(-3px)',
-                                    boxShadow: '0 5px 15px rgba(12, 189, 237, 0.4)'
-                                }
-                            }}
-                        >
-                            S'abonner
-                        </Button>
-                        
                         <Button 
                         component={RouterLink} to="/projet"
                             variant='outlined' 
