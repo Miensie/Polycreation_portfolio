@@ -1,7 +1,7 @@
 {
   "name": "portfolio-polycreation",
   "private": true,
-  "homepage": "https://Polycreation.github.io/portfolio",
+  "homepage": "https://Polycreation.github.io/Portfolio",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

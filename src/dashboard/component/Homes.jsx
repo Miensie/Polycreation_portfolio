@@ -140,7 +140,6 @@ export default function Home() {
                         variant="h4" 
                         component="h1" 
                         sx={{
-                            fontWeight: 600,
                             mb: 2,
                             fontSize: '50px',
                             background: 'linear-gradient(90deg, #2F4F2F,#007FFF)',
