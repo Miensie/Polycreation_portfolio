@@ -10,6 +10,7 @@ import {
   Snackbar,
   Alert
 } from '@mui/material';
+import { sendEmail } from '../../services/emailService'; // Assurez-vous d'avoir une fonction sendEmail pour envoyer les emails
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -19,6 +20,9 @@ const Contact = () => {
     message: ''
   });
   const [openSnackbar, setOpenSnackbar] = useState(false);
+  const [success, setSuccess] = useState('');
+  const [error, setError] = useState('');
+  const [activeStep, setActiveStep] = useState(0);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,7 +32,7 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('Formulaire soumis:', formData);
     // Ici vous pouvez ajouter votre logique pour envoyer le formulaire
@@ -37,8 +41,54 @@ const Contact = () => {
       nom: '',
       prenom: '',
       email: '',
-      message: ''
+      
     });
+
+    try {
+      // Créer le contenu de l'email
+      const emailSubject = `Nouveau message de contact de ${formData.nom} ${formData.prenom}`;
+      const emailContent = `
+        Nouveau message de contact:
+        ----------------------------
+        Nom: ${formData.nom}
+        ----------------------------
+        Prenom: ${formData.prenom}
+        ----------------------------
+        Email: ${formData.email}
+        ----------------------------
+        Message: ${formData.message}
+        ----------------------------
+        Veuillez répondre à ce message pour plus de détails.
+      `;
+
+      // Adresse email de l'admin (remplacez par votre adresse)
+      const ADMIN_EMAIL = 'koffimiensie@gmail.com'
+      
+      // Envoyer l'email à l'admin
+      const emailResult = await sendEmail({
+        to: ADMIN_EMAIL,
+        subject: emailSubject,
+        text: emailContent,
+      });
+      
+      if (!emailResult.success) {
+        throw new Error("Échec de l'envoi de l'email: " + emailResult.error);
+      }
+
+      setSuccess("Votre message a été envoyé avec succès ! Veuillez patienter, vous recevrez une réponse dans les plus brefs délais.");
+      
+      // Réinitialiser le formulaire après soumission réussie
+      setFormData({
+        nom: '',
+        prenom: '',
+        email: '',
+        t
+      });
+      setActiveStep(0);
+    } catch (err) {
+      console.error("Erreur lors de l'envoi:", err);
+      setError("Une erreur s'est produite lors de l'envoi de votre message");
+    };
   };
 
   return (

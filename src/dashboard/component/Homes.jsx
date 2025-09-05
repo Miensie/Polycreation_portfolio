@@ -11,6 +11,7 @@ import {
 } from '@mui/material';
 import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
+import logo from '../../assets/logo.jpg'
 
 // Animation de rotation pour le logo
 const rotate = keyframes`
@@ -124,7 +125,7 @@ export default function Home() {
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                     <RotatingLogo
                         alt="Logo"
-                        src="./src/assets/logo.jpg"
+                        src={logo}
                         sx={{
                             width: 250, 
                             height: 250,
@@ -141,7 +142,7 @@ export default function Home() {
                         component="h1" 
                         sx={{
                             mb: 2,
-                            fontSize: '50px',
+                            fontSize: { xs: '2.5rem', sm: '3.5rem', md: '4rem' },
                             background: 'linear-gradient(90deg, #2F4F2F,#007FFF)',
                             backgroundClip: 'text',
                             WebkitTextFillColor: 'transparent',

@@ -1,4 +1,6 @@
 import { Box, Typography, List, ListItem, Avatar, Card, CardContent } from '@mui/material';
+import armand from '../../assets/armand.jpg'
+import eze from '../../assets/eze.png'
 
 const people = [
   {
@@ -6,14 +8,14 @@ const people = [
     name: 'Armand konan Kouakou',
     role: 'Co-Founder / Développeur web',
     description: 'Élève ingénieur en matériau et procédé à l\'INP-HB',
-    imageUrl: '/src/assets/armand.jpg', // ✅ Chemin corrigé
+    imageUrl: armand, // ✅ Chemin corrigé
   },
   {
     id: 2,
     name: 'Miensié ezekiel Amani',
     role: 'Co-Founder / Développeur web, app & Designer graphique',
     description: 'Élève ingénieur en chimie et génie des procédés à l\'INP-HB',
-    imageUrl: '/src/assets/eze.png', // ✅ Chemin corrigé
+    imageUrl: eze, // ✅ Chemin corrigé
   },
   // Ajoutez plus de membres si nécessaire
 ];

@@ -32,6 +32,7 @@ import {
   FilterList as FilterIcon
 } from '@mui/icons-material';
 import { styled } from '@mui/material/styles';
+import Footer from '../dashboard/component/Footer';
 
 // ===== STYLED COMPONENTS =====
 const ProjectCard = styled(Card)(({ theme }) => ({
@@ -567,6 +568,10 @@ export default function ProjetPortfolio() {
           </>
         )}
       </Dialog>
+      <Box>
+        <Footer/>
+      </Box>
     </Box>
+    
   );
 }

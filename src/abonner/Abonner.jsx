@@ -13,6 +13,8 @@ import {
   useMediaQuery
 } from '@mui/material';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import Footer from '../dashboard/component/Footer';
+import { sendEmail } from '../services/emailService'; // Assurez-vous d'avoir une fonction sendEmail pour envoyer les emails
 
 export default function Abonner() {
   const [formData, setFormData] = useState({
@@ -26,6 +28,12 @@ export default function Abonner() {
   
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const isExtraSmallScreen = useMediaQuery(theme.breakpoints.down('xs'));
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+  const [success, setSuccess] = useState('');
+  const [error, setError] = useState('');
+  const [activeStep, setActiveStep] = useState(0);
 
   const handleChange = (e) => {
     const { name, value, checked, type } = e.target;
@@ -35,10 +43,62 @@ export default function Abonner() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('Données du formulaire:', formData);
     // Logique d'envoi des données vers votre API
+    try {
+      // Créer le contenu de l'email
+      const emailSubject = `Nouveau message de contact de ${formData.nom} ${formData.prenom}`;
+      const emailContent = `
+        Nouveau message de contact:
+        ----------------------------
+        Nom: ${formData.nom}
+        ----------------------------
+        Prenom: ${formData.prenom}
+        ----------------------------
+        Email: ${formData.email}
+        ----------------------------
+        Téléphone: ${formData.telephone}
+        ----------------------------
+        Entreprise: ${formData.entreprise || 'Non spécifié'}
+        ----------------------------
+        Veuillez répondre à ce message pour plus de détails.
+        
+      `;
+    
+      // Adresse email de l'admin (remplacez par votre adresse)
+      const ADMIN_EMAIL = 'koffimiensie@gmail.com'
+          
+      // Envoyer l'email à l'admin
+      const emailResult = await sendEmail({
+        to: ADMIN_EMAIL,
+        subject: emailSubject,
+        text: emailContent,
+      });
+          
+      if (!emailResult.success) {
+        throw new Error("Échec de l'envoi de l'email: " + emailResult.error);
+      }
+    
+      setSuccess("Votre abonnement a été soumis avec succès! Veuillez patienter, vous recevrez un email de confirmation dans quelques instants.");
+          
+      // Réinitialiser le formulaire après soumission réussie
+      setFormData({
+        nom: '',
+        prenom: '',
+        email: '',
+        telephone: '',
+        entreprise: '',
+        acceptConditions: false
+      });
+      setOpenSnackbar(true);
+      setActiveStep(0);
+    } catch (err) {
+      console.error("Erreur lors de l'envoi:", err);
+      setError("Une erreur s'est produite lors de l'envoi de votre abonnement");
+      setOpenSnackbar(true);
+    }
   };
 
   return (
@@ -187,6 +247,9 @@ export default function Abonner() {
           </Grid>
         </Grid>
       </Paper>
+      <Box>
+        <Footer/>
+      </Box>
     </Container>
   );
 }
