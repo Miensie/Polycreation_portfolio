@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box, Typography, Grid, Card, CardMedia, CardContent, Link } from '@mui/material';
 import affiche1 from '../../assets/affiche1.jpg'
-import affiche2 from '../../assets/affiche2.png'
-import affiche3 from '../../assets/affiche3.png'
+import affiche2 from '../../assets/affiche2.jpg'
+import affiche3 from '../../assets/affiche3.jpg'
 
 const products = [
   {
