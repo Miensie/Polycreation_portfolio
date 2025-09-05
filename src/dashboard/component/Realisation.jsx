@@ -1,15 +1,15 @@
 import React from 'react';
 import { Box, Typography, Grid, Card, CardMedia, CardContent, Link } from '@mui/material';
-import affiche1 from '../../assets/affiche1.jpg'
-import affiche2 from '../../assets/affiche2.jpg'
-import affiche3 from '../../assets/affiche3.jpg'
+//import affiche1 from '../../assets/affiche1.jpg'
+//import affiche2 from '../../assets/affiche2.jpg'
+//import affiche3 from '../../assets/affiche3.jpg'
 
 const products = [
   {
     id: 1,
     name: 'Affiche évènementielle',
     href: '#',
-    imageSrc: affiche1,
+    imageSrc: "assets/affiche1.jpg",
     imageAlt: "Affiche publicitaire design moderne",
     color: 'Black',
   },
@@ -17,7 +17,7 @@ const products = [
     id: 2, // IDs uniques corrigés
     name: 'Affiche pour anniversaire',
     href: '#',
-    imageSrc: affiche2,
+    imageSrc: "assets/Affiche2.png",
     imageAlt: "Affiche publicitaire créative",
     color: 'Black',
   },
@@ -25,7 +25,7 @@ const products = [
     id: 3, // IDs uniques corrigés
     name: 'Affiche publicitaire',
     href: '#',
-    imageSrc: affiche3,
+    imageSrc: "assets/Affiche3.png",
     imageAlt: "Affiche publicitaire artistique",
     color: 'Black',
   },
