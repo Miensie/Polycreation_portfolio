@@ -5,17 +5,27 @@ import { Box, Typography, List, ListItem, Avatar, Card, CardContent } from '@mui
 const people = [
   {
     id: 1,
-    name: 'Armand konan Kouakou',
-    role: 'Co-Founder / Développeur web',
-    description: 'Élève ingénieur en matériau et procédé à l\'INP-HB',
-    imageUrl: "assets/armand.jpg" // ✅ Chemin corrigé
+    name: 'Armand Konan Kouakou',
+    role: 'Co-Fondateur / Responsable du pole Développement Digital',
+    imageUrl: "assets/Armand.png" // ✅ Chemin corrigé
   },
   {
     id: 2,
-    name: 'Miensié ezekiel Amani',
-    role: 'Co-Founder / Développeur web, app & Designer graphique',
-    description: 'Élève ingénieur en chimie et génie des procédés à l\'INP-HB',
-    imageUrl: "assets/eze.png" // ✅ Chemin corrigé
+    name: 'Miensié Ezechiel Amani Koffi',
+    role: 'Co-Fondateur / Responsable du pole Analyse, Optmisation & Production Audio-Visuelle',
+    imageUrl: "assets/eze.jpg" // ✅ Chemin corrigé
+  },
+  {
+    id: 3,
+    name: 'Jean Jacques Kouman',
+    role: 'Responsable du pole Design & Identité Visuelle',
+    imageUrl: "assets/jj.jpg" // ✅ Chemin corrigé
+  },
+  {
+    id: 4,
+    name: 'Daniel Naboué Bi',
+    role: 'Responsable du pole Marketing & Communication',
+    imageUrl: "assets/daniel.jpg" // ✅ Chemin corrigé
   },
   // Ajoutez plus de membres si nécessaire
 ];

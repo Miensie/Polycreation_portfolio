@@ -7,17 +7,17 @@ import { Box, Typography, Grid, Card, CardMedia, CardContent, Link } from '@mui/
 const products = [
   {
     id: 1,
-    name: 'Affiche évènementielle',
+    name: 'Affiche évenementielle',
     href: '#',
-    imageSrc: "assets/affiche1.jpg",
+    imageSrc: "assets/affiche/JC.png",
     imageAlt: "Affiche publicitaire design moderne",
     color: 'Black',
   },
   {
     id: 2, // IDs uniques corrigés
-    name: 'Affiche pour anniversaire',
+    name: 'Affiche publicitaire',
     href: '#',
-    imageSrc: "assets/Affiche2.png",
+    imageSrc: "assets/affiche/design.jpg",
     imageAlt: "Affiche publicitaire créative",
     color: 'Black',
   },
@@ -25,7 +25,7 @@ const products = [
     id: 3, // IDs uniques corrigés
     name: 'Affiche publicitaire',
     href: '#',
-    imageSrc: "assets/Affiche3.png",
+    imageSrc: "assets/affiche/dev.jpg",
     imageAlt: "Affiche publicitaire artistique",
     color: 'Black',
   },

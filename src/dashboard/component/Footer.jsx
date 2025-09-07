@@ -11,6 +11,7 @@ import {
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import XIcon from '@mui/icons-material/X';
+import FacebookIcon from '@mui/icons-material/Facebook';
 
 // Composant Logo/Brand
 function BrandLogo() {
@@ -218,7 +219,7 @@ export default function Footer() {
             <IconButton
               color="inherit"
               size="small"
-              href="https://github.com/votre-username"
+              href="https://github.com/Miensie"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -236,7 +237,7 @@ export default function Footer() {
             <IconButton
               color="inherit"
               size="small"
-              href="https://linkedin.com/in/votre-profil"
+              href="https://linkedin.com/company/polycreation"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -254,10 +255,10 @@ export default function Footer() {
             <IconButton
               color="inherit"
               size="small"
-              href="https://twitter.com/votre-handle"
+              href="https://www.facebook.com/profile.php?id=61571979104052"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Twitter/X"
+              aria-label="Facebook"
               sx={{ 
                 color: 'text.secondary',
                 '&:hover': { 
@@ -267,7 +268,7 @@ export default function Footer() {
                 transition: 'all 0.3s ease'
               }}
             >
-              <XIcon />
+              <FacebookIcon />
             </IconButton>
           </Stack>
         </Box>
