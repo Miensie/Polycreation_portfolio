@@ -141,7 +141,7 @@ export default function ServicesGrid() {
       color: "#2a9d8f",
       subservices: [
         { name: "Analyse statistique", icon: <AnalyticsIcon /> },
-        { name: "Modèles prédictifs", icon: <SchoolIcon /> }, // Correction orthographique
+        { name: "Machine learning", icon: <SchoolIcon /> }, // Correction orthographique
         { name: "Plans d'expérience", icon: <BuildIcon /> }
       ]
     }

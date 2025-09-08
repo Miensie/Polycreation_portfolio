@@ -17,7 +17,7 @@ const people = [
   },
   {
     id: 3,
-    name: 'Jean Jacques Kouman',
+    name: 'Jean-Jacques Kouma',
     role: 'Responsable du pole Design & Identité Visuelle',
     imageUrl: "assets/jj.jpg" // ✅ Chemin corrigé
   },
