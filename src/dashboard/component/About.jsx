@@ -6,10 +6,10 @@ const links = [
 ];
 
 const stats = [
-  { name: 'Années d\'experiences', value: '3+' },
-  { name: 'Projets terminés', value: '50+' },
-  { name: 'Clients satisfaires', value: '50+' },
-  { name: 'Projets en cours', value: 'Illimité' },
+  { name: 'Années d\'experiences', value: '1+' },
+  { name: 'Projets terminés', value: '4+' },
+  { name: 'Clients satisfaires', value: '4+' },
+  { name: 'Projets en cours', value: '2' },
 ];
 
 const BlobEffect = styled('div')(({ theme }) => ({
