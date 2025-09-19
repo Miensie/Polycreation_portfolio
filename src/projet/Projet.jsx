@@ -507,7 +507,7 @@ export default function ProjetPortfolio() {
                 height={isTablet ? "250" : "350"}
                 image={selectedProject.image}
                 alt={selectedProject.title}
-                sx={{ objectFit: 'cover' }}
+                sx={{ objectFit: "contain"}}
               />
               
               <Box sx={{ p: 3 }}>
